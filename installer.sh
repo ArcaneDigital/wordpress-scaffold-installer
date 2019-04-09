@@ -1,4 +1,6 @@
 #!/bin/sh
+#!/bin/bash
+
 . ~/.nvm/nvm.sh
 . ~/.profile
 . $(brew --prefix nvm)/nvm.sh  # if installed via Brew
@@ -38,12 +40,18 @@ installDependencies() {
 }
 
 setupEnv() {
-	printf '\n\033[36mEnv setup!\033[0m\n'
+	printf '\n\033[36mEnv setup!\033[0m\n\n'
 }
 
 valetCommand() {
+	read -p 'Do you want to set up a Valet for this project? (Y/N) ' -n 1 -r
+	echo
+	if [[ ! $REPLY =~ ^[Yy]$ ]]
+	then
+		return 0
+	fi
 	printf '\n\033[36mSetting up Valet!\033[0m\n\n'
-	cd $NAME &&valet start && valet link $NAME && valet secure $NAME
+	cd $NAME && valet start && valet link $NAME && valet secure $NAME
 	printf '\n\033[34mVisit https://'$NAME'.test\033[0m\n'
 }
 
