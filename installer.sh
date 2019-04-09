@@ -8,7 +8,7 @@
 printf '\n\033[34mWelcome to the WordPress Scaffold Installer\033[0m \e[1;37m(Version 1.0.0)\e[0m \n\n'
 
 promptName() {
-	read -p 'Project name: ' NAME
+	read -p 'Project name (Example: awesome-website): ' NAME
 }
 
 cloneStater() {
