@@ -24,7 +24,9 @@ setupGit() {
 }
 
 installDependencies() {
-	composer install && nvm use && npm install
+	composer install
+	 nvm use
+	 npm install
 }
 
 setupEnv() {
@@ -37,4 +39,4 @@ setupGit
 installDependencies
 setupEnv
 
-printf '\n\033[32mCompleted!\033[0m\n'
+printf '\n\033[32mWordPress Scaffold Setup Completed!\033[0m\n'
