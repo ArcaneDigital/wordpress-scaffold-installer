@@ -16,4 +16,4 @@ cd code/
 sh -c "$(curl -fsSL https://raw.github.com/ArcaneDigital/wordpress-scaffold-installer/master/installer.sh)"
 ```
 
-This command will create a directory once you fill out the project name prompt on the terminal
+This command will create a directory once you fill out the project name prompt
