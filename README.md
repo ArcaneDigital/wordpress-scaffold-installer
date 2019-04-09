@@ -2,7 +2,7 @@
 Install wizard for WordPress Scaffold
 
 ## Requirements
-- Composer
+- composer
 - nvm via brew
 - npm
 
