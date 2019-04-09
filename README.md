@@ -1,6 +1,11 @@
 # WordPress Scaffold Installer
 Install wizard for WordPress Scaffold
 
+## Requirements
+- Composer
+- nvm via brew
+- npm
+
 ## Using the installer
 
 ### Enter your working directory
