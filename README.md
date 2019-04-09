@@ -1,5 +1,5 @@
 # WordPress Scaffold Installer
-Install wizard for Arcane WordPress scaffold
+Install wizard for WordPress Scaffold
 
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ArcaneDigital/wordpress-scaffold-installer/master/installer.sh)"
