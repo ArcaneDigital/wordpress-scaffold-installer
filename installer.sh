@@ -3,7 +3,7 @@
 . ~/.profile
 . $(brew --prefix nvm)/nvm.sh  # if installed via Brew
 
-printf '\n\033[34mWelcome to the WordPress Scaffold Installer\033[0m \e[1;37m(Version 1.0.0) \e[0m \n\n'
+printf '\n\033[34mWelcome to the WordPress Scaffold Installer\033[0m \e[1;37m(Version 1.0.0)\e[0m \n\n'
 
 promptName() {
 	read -p 'Project name: ' NAME
@@ -41,11 +41,17 @@ setupEnv() {
 	printf '\n\033[36mEnv setup!\033[0m\n'
 }
 
+valetCommand() {
+	printf '\n\033[36mSetting up Valet!\033[0m\n\n'
+	cd $NAME &&valet start && valet link $NAME && valet secure $NAME
+	printf '\n\033[34mVisit https://'$NAME'.test\033[0m\n'
+}
+
 promptName
 cloneStater
 setupGit
 installDependencies
 #setupEnv
-
+#valetCommand
 
 printf '\n\033[32mWordPress Scaffold Setup Completed!\033[0m\n\n'
