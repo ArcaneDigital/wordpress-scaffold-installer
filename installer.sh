@@ -8,7 +8,7 @@
 printf '\n\033[34mWelcome to the WordPress Scaffold Installer\033[0m \e[1;37m(Version 1.0.0)\e[0m \n\n'
 
 promptName() {
-	read -p 'Project name: ' NAME
+	read -p 'Project name (Example: awesome-website): ' NAME
 }
 
 cloneStater() {
@@ -41,7 +41,9 @@ installDependencies() {
 
 setupEnv() {
 	printf '\n\033[36mEnv setup!\033[0m\n\n'
+	cp .env.example .env
 }
+
 
 valetCommand() {
 	read -p 'Do you want to set up a Valet for this project? (Y/N) ' -n 1 -r
@@ -59,7 +61,7 @@ promptName
 cloneStater
 setupGit
 installDependencies
-#setupEnv
-#valetCommand
+setupEnv
+valetCommand
 
 printf '\n\033[32mWordPress Scaffold Setup Completed!\033[0m\n\n'
